@@ -12,8 +12,8 @@ class Logistics {
 	public:
 		Logistics();
 		~Logistics();
-		track* getTrack(){return t;}
-		void setTrack(track* a){t = a;}
+		track* getTrack();
+		void setTrack(track* a);
 		virtual void transportContainers() = 0;
 		virtual void preperation() = 0;
 		virtual void serviceCar() = 0;
