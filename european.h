@@ -1,9 +1,9 @@
 #ifndef EUROPEAN_H
 #define EUROPEAN_H
 
-#include "logistics.h"
+#include "Logistics.h"
 
-class european : public logistics {
+class European : public Logistics {
 	void transportContainers();
 	void preperation();
 	void serviceCar();
