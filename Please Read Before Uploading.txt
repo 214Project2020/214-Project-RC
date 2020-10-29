@@ -1,0 +1,23 @@
+To help establish a genral standard of namimg all our files please adhere to the following when making a new file:
+(to make the creation of a makefile easier)
+(to make it look more proffesional)
+(to make the group's files look consistent)
+
+
+CAMELCASE:
+"camelCase is a naming convention in which the first letter 
+of each word in a compound word is capitalized, except for the first word.
+Software developers often use camelCase when writing source code.
+camelCase is useful in programming since element names cannot contain spaces"
+
+Single words ->       One.cpp One.h
+
+Two words    ->       secondWord.cpp secondWord.h
+
+Three words  ->       thisIsThree.cpp thisIsThree.h
+
+
+
+EXCEPTIONS:
+
+makefile  (write like that)
