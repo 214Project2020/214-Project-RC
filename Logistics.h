@@ -8,12 +8,12 @@ using namespace std;
 
 class Logistics {
 	private:
-		track* t;
+		Track* t;
 	public:
 		Logistics();
 		~Logistics();
-		track* getTrack();
-		void setTrack(track* a);
+		Track* getTrack();
+		void setTrack(Track* a);
 		virtual void transportContainers() = 0;
 		virtual void preperation() = 0;
 		virtual void serviceCar() = 0;
