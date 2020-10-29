@@ -1,9 +1,9 @@
 #ifndef NONEUROPEAN_H
 #define NONEUROPEAN_H
 
-#include "logistics.h"
+#include "Logistics.h"
 
-class nonEuropean : public logistics {
+class nonEuropean : public Logistics {
 	void transportContainers();
 	void preperation();
 	void serviceCar();
