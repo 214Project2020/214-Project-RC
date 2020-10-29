@@ -10,7 +10,7 @@ class Logistics {
 	private:
 		Track* t;
 	public:
-		Logistics();
+		Logistics(Track*);
 		~Logistics();
 		Track* getTrack();
 		void setTrack(Track* a);
