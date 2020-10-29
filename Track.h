@@ -14,7 +14,7 @@ class Track{
 	public:
 		Track();
 		Track(string, int, bool, string);
-		~track();
+		~Track();
 		string getTrackName();
 		void setTrackName(string);
 		int getNumLaps();
