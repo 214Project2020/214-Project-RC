@@ -2,15 +2,16 @@
 #define LOGISTICS_H
 
 
-#include "track.h"
+#include "Track.h"
 
 using namespace std;
 
-class logistics {
+class Logistics {
 	private:
 		track* t;
 	public:
-		logistics();
+		Logistics();
+		~Logistics();
 		track* getTrack(){return t;}
 		void setTrack(track* a){t = a;}
 		virtual void transportContainers() = 0;
