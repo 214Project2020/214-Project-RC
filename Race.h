@@ -5,9 +5,12 @@
 using namespace std;
 
 class Race {
+private:
+
+public:
  Race();
  ~Race();
- Iterator* CreateIterator();
+ virtual Iterator* CreateIterator()=0;
  virtual int count()=0;
  virtual void appendLap(Lap* lap)=0;
 
