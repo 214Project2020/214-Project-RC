@@ -2,8 +2,8 @@
 
 using namespace std;
 
-Logistics::Logistics(){
-
+Logistics::Logistics(Track* track){
+  this->t = track;
 }
 
 Logistics::~Logistics(){
@@ -15,7 +15,7 @@ track* Logistics::getTrack(){
   return this->t;
 }
 
-void Logistics::setTrack(track* a){
+void Logistics::setTrack(Track* a){
 
   this->t = a;
 }
