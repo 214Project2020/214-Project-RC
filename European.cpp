@@ -1,12 +1,12 @@
-#include "european.h"
+#include "European.h"
 
 #include <iostream>
 
-void european::transportContainers(){
+void European::transportContainers(){
 	cout << "Transportation: The containers were transported by trucks." << endl;
 }
 
-void european::preperation(){
+void European::preperation(){
 	   cout << "------------------------------------------" << endl;
     cout << "STARTING RACE IN " << this->getTrack()->getCountry() << endl;
     cout << "Category: European" << endl;
@@ -15,7 +15,7 @@ void european::preperation(){
     cout << "------------------------------------------" << endl;
 }
 
-void european::serviceCar(){
+void European::serviceCar(){
 	cout << "------------------------------------------" << endl;
 	cout << "The Car is transported back to the factory for servicing" << endl;
 	cout << "------------------------------------------" << endl;
