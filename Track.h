@@ -5,15 +5,15 @@
 
 using namespace std;
 
-class track{
+class Track{
 	private:
 		string trackName;
 		int numLaps;
 		bool isEuro;
         string country;
 	public:
-		track();
-		track(string, int, bool, string);
+		Track();
+		Track(string, int, bool, string);
 		~track();
 		string getTrackName();
 		void setTrackName(string);
