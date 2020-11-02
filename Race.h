@@ -1,19 +1,19 @@
 #ifndef RACE_H
 #define RACE_H
+
 #include "Iterator.h"
+#include "Lap.h"
 
 using namespace std;
 
-class Race {
-private:
-
+class Race
+{
 public:
- Race();
- ~Race();
- virtual Iterator* CreateIterator()=0;
- virtual int count()=0;
- virtual void appendLap(Lap* lap)=0;
-
+    Race();
+    ~Race();
+    virtual Iterator* createIterator()=0;
+    virtual void addLap(Lap* l)=0;
+ 
 };
 
 #endif

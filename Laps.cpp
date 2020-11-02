@@ -1,21 +1,24 @@
 #include "Laps.h"
+#include "lapIterator.h"
+#include "Lap.h"
 
 using namespace std;
 
-Laps::Laps(){}
-int Laps::count(){
-    //return total items in the lapVector
-return this->lapVector.size();
+Laps::Laps(Lap* l){
+    this->startingLap = l; //initial time is -1 because lap hasnt taken place yet
+this->newestLap = l;
 }
 
-Iterator* Laps::CreateIterator(){
-return new LapIterator(this);
+Laps::~Laps(){
+    delete startingLap;
 }
 
-void Laps::appendLap(lap* lap){
-this->lapVector.push_back(lap);
+void Laps::addLap(Lap* l){
+    newestLap->setNextLap(l);
+    newestLap= l;
+
 }
 
-void Laps::GetLap(int lapNum){
-return this->lapVector[lapNum];
+lapIterator* Laps::createIterator(){
+    return (new lapIterator(this->startingLap));    
 }

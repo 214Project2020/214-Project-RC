@@ -1,21 +1,25 @@
 #ifndef LAPS_H
 #define LAPS_H
-#include <vector>
 
 #include "Iterator.h"
 #include "Lap.h"
 #include "Race.h"
+#include "lapIterator.h"
 
-class Laps :public Race
+using namespace std;
+
+class Laps : public Race
 {
     private:
-        vector<Lap> lapVector;
+        Lap* startingLap;
+        Lap* newestLap;
+        
     public:
-        Laps();
+        Laps(Lap *l);
         ~Laps();
-        Iterator* CreateIterator(); //why did Jody want to make it virtual?
-        int count();
-        void appendLap(Lap* lap);
-        Lap* GetLap(int lapNum);
+        lapIterator* createIterator();
+        void addLap(Lap* l); //first add all laps then create iterator
+ 
+};
 
-}
+#endif

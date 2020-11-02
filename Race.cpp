@@ -4,6 +4,4 @@ using namespace std;
 
 Race::Race(){}
 
-Race::~Race(){
-}
-
+Race::~Race(){}
