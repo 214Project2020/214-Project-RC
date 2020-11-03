@@ -4,11 +4,11 @@
 using namespace std;
 
 ElectronicsCurrentSeason::ElectronicsCurrentSeason(){
-    printf("Electronics Engineering department created for current season.\n");
+    cout<<"Electronics Engineering department created for current season.\n";
     
 }
 
 void ElectronicsCurrentSeason::ElecImprove(){
-    printf("Using data from testing the electronics of the car of the current season has been improved.\n");
+    cout<<"Using data from testing the electronics of the car of the current season has been improved.\n";
 
 }
