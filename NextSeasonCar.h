@@ -6,6 +6,7 @@
 #include <time.h>
 #include <iostream>
 #include "F1Car.h"
+
 #include "Aerodynamics.h"
 #include "Engine.h"
 #include "Electronics.h"
@@ -16,7 +17,7 @@
 #include "ChassisNextSeason.h"
 
 using namespace std;
-class NextSeasonCar
+class NextSeasonCar : public F1Car
 {
 private:
     Chassis *chas;
@@ -32,6 +33,11 @@ public:
     Engine* getEngi();
     Aerodynamics* getAero();
     Electronics* getElec();
+
+    virtual void aeroImprover();
+    virtual void elecImprover();
+    virtual void engiImprover();
+    virtual void chasImprover();
 };
 
 #endif

@@ -16,7 +16,7 @@
 #include "ChassisCurrentSeason.h"
 
 using namespace std;
-class CurrentSeasonCar
+class CurrentSeasonCar : public F1Car
 {
 private:
     Chassis *chas;
@@ -32,6 +32,11 @@ public:
     Engine* getEngi();
     Aerodynamics* getAero();
     Electronics* getElec();
+
+    virtual void aeroImprover();
+    virtual void elecImprover();
+    virtual void engiImprover();
+    virtual void chasImprover();
     
 };
 

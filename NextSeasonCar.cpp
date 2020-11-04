@@ -4,18 +4,15 @@
 
 using namespace std;
 
-NextSeasonCar::NextSeasonCar(){
-    Chassis *chassisCS = new ChassisNextSeason();
-    Engine *engineCS = new EngineNextSeason();
-    Aerodynamics *aeroCS = new AerodynamicsNextSeason();
-    Electronics *elecCS = new ElectronicsNextSeason();
 
-    chas = chassisCS;
-    engi = engineCS;
-    aero = aeroCS;
-    elec = elecCS;
+NextSeasonCar::NextSeasonCar(){
+    chas = new ChassisNextSeason();
+    engi = new EngineNextSeason();
+    aero = new AerodynamicsNextSeason();
+    elec = new ElectronicsNextSeason();
     
 }
+
 
 Chassis* NextSeasonCar::getChas(){
     return chas;
@@ -31,4 +28,20 @@ Engine* NextSeasonCar::getEngi(){
 
 Aerodynamics* NextSeasonCar::getAero(){
     return aero;
+}
+
+void NextSeasonCar::aeroImprover(){
+    aero->AeroImprove();
+}
+
+void NextSeasonCar::elecImprover(){
+    elec->ElecImprove();
+}
+
+void NextSeasonCar::chasImprover(){
+    chas->ChassisImprove();
+}
+
+void NextSeasonCar::engiImprover(){
+    engi->EngineImprove();
 }
