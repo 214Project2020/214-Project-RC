@@ -6,7 +6,7 @@ F1Car::F1Car(){
 
 }
 
-F1Car::F1Car(CurrentSeasonCar *carCS){
+/*F1Car::F1Car(CurrentSeasonCar *carCS){
     chas = carCS->getChas();
     engi = carCS->getEngi();
     aero = carCS->getAero();
@@ -19,11 +19,13 @@ F1Car::F1Car(NextSeasonCar *carNS){
     aero = carNS->getAero();
     elec = carNS->getElec();
 }
+*/
 
 F1Car::~F1Car(){
     
 }
 
+/*
 void F1Car::aeroImprover(){
     aero->AeroImprove();
 }
@@ -39,3 +41,4 @@ void F1Car::chasImprover(){
 void F1Car::engiImprover(){
     engi->EngineImprove();
 }
+*/

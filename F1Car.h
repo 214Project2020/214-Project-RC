@@ -10,38 +10,24 @@
 #include "Electronics.h"
 #include "Chassis.h"
 
-#include "AerodynamicsCurrentSeason.h"
-#include "EngineCurrentSeason.h"
-#include "ElectronicsCurrentSeason.h"
-#include "ChassisCurrentSeason.h"
-#include "AerodynamicsNextSeason.h"
-#include "EngineNextSeason.h"
-#include "ElectronicsNextSeason.h"
-#include "ChassisNextSeason.h"
-#include "NextSeasonCar.h"
-#include "CurrentSeasonCar.h"
-
-
 using namespace std;
 class F1Car
 {
 private:
-    Chassis* chas;
-    Engine* engi;
-    Aerodynamics* aero;
-    Electronics* elec;
+    Chassis *chas;
+    Engine *engi;
+    Aerodynamics *aero;
+    Electronics *elec;
 
 
 
 public:
     F1Car();
-    F1Car(CurrentSeasonCar *carCS);
-    F1Car(NextSeasonCar *carNS);
     ~F1Car();
-    void aeroImprover();
-    void elecImprover();
-    void engiImprover();
-    void chasImprover();
+    virtual void aeroImprover()=0;
+    virtual void elecImprover()=0;
+    virtual void engiImprover()=0;
+    virtual void chasImprover()=0;
     
 };
 
