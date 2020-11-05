@@ -1,6 +1,7 @@
 #include "racingStrategyState.h"
 
 void onePitStopStrat::handleState(){
+	cout << "One pit stop strategy:" << endl;
 	this->getSession()->setPractice(0, 1, 1);
 	this->getSession()->setQuali(0,1,0);
 	this->getSession()->setRace(2,0,0);
