@@ -1,8 +1,10 @@
 #ifndef CRASHCOMMAND_H_INCLUDED
 #define CRASHCOMMAND_H_INCLUDED
+#include "Command.h"
 #include "Crash.h"
 
-class CrashCommand {
+class CrashCommand : public Command
+{
 private:
     Crash* crashObj;
 public:

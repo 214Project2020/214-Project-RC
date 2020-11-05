@@ -7,7 +7,7 @@ Switch::Switch(Command* start, Command* stop) {
     stopCommand = stop;
 }
 
-void Switch::startComm();
+void Switch::startComm()
 {
     startCommand->execute();
 }
