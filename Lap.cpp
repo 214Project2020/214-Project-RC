@@ -43,11 +43,15 @@ Lap::Lap()
 {
 
   srand((unsigned) time(0)+this->addRandom++);
-  int randomInt = rand()%(100);
+  /*int randomInt = rand()%(100);
   float randomFloat= rand()%(100);
 
   randomFloat = (float)randomFloat/100;
-  float time = randomInt +randomFloat;
+  float time = randomInt +randomFloat;*/
+  int intPart = (rand() % (180 +60)) + 60;
+  float floatPart = (rand() % 59);
+  floatPart = floatPart/100;
+  float time = intPart + floatPart;
 
     this->lapTime =time ;
     this->nextLap = nullptr;
@@ -90,7 +94,7 @@ void Lap::calculateCrashPossibility() {
         //High possibility of crash, execute crash command - still chance of recovery, calculated later
         //srand((unsigned) time(0)+this->addRandom++);
         int crashRecovery = (rand() % 40) + 1;
-        cout << endl << "NUMBER: " << crashRecovery << endl << endl;
+        //cout << endl << "NUMBER: " << crashRecovery << endl << endl;
         if (crashRecovery > 5) {       //Recovers from crash
 
            switchCont->stopComm();

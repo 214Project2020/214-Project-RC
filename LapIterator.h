@@ -11,6 +11,7 @@ class lapIterator : public Iterator
     private:
         Lap* firstLap;
         Lap* currentLap;
+        float totalTime;
     public:
         lapIterator(Lap *l); //recieves the first lap newly created by Laps
         ~lapIterator();
@@ -19,7 +20,9 @@ class lapIterator : public Iterator
         bool hasNext();
         bool isDone();
         Lap* getCurrentLap();
- 
+        void addTime();
+        void displayTotalTime();
+
 };
 
 #endif
