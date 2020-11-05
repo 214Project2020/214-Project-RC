@@ -1,14 +1,16 @@
 #include "racingStrategyContext.h"
 
-racingStrategyContext::racingStrategyContext(track* t, Session* s){
+racingStrategyContext::racingStrategyContext(Track* t, Session* s){
 	this->t  = t;
 	this->st = new twoPitStopStrat();
 	this->s = s;
+	this->st->setSession(this->s);
 }
 
 void racingStrategyContext::setStrategy(racingStrategyState* st){
 	delete this->st;
 	this->st = st;
+	this->st->setSession(this->s);
 }
 
 void racingStrategyContext::chooseStrategy(){
