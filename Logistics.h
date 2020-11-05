@@ -8,10 +8,9 @@ using namespace std;
 
 class Logistics {
 	private:
-		Track* t;
+		Track* tr;
 	public:
 		Logistics(Track*);
-		~Logistics();
 		Track* getTrack();
 		void setTrack(Track* a);
 		virtual void transportContainers() = 0;
