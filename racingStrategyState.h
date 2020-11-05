@@ -3,6 +3,7 @@
 
 #include "Session.h"
 #include "racingStrategyContext.h"
+#include <iostream>
 
 using namespace std;
 class racingStrategyContext;
