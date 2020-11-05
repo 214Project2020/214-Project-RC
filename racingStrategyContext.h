@@ -1,7 +1,7 @@
 #ifndef RACINGSTRATEGYCONTEXT_H
 #define RACINGSTRATEGYCONTEXT_H
 
-#include "track.h"
+#include "Track.h"
 #include "racingStrategyState.h"
 #include "Session.h"
 
@@ -11,11 +11,11 @@ class racingStrategyState;
 
 class racingStrategyContext {
 private:
-	track* t;
+	Track* t;
 	racingStrategyState* st;
 	Session* s;
 public:
-	racingStrategyContext(track*, Session*);
+	racingStrategyContext(Track*, Session*);
 	~racingStrategyContext();
 	void setStrategy(racingStrategyState*);
 	void chooseStrategy();
