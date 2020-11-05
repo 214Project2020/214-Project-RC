@@ -2,10 +2,14 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
+#include <ctime>
 #include <iostream>
 #include "Crash.h"
-#include "crashCommand.h"
+#include "Switch.h"
+#include "CrashCommand.h"
 #include "StopCrashCommand.h"
+#include "Command.h"
+
 using namespace std;
 
 
@@ -13,11 +17,14 @@ Lap::Lap(float time)
 {
     this->lapTime= time;
     this->nextLap = nullptr;
-    //this->lapNumber = this->addRandom++;
+    cout << "HELLO" <<endl;
     Crash* crash = new Crash();
-    CrashCommand* crashCommand = new crashCommand(crash);
-    StopCrashCommand* stopCrashCommand = new stopCrashCommand(crash);
-    Switch* switchCont = new Switch(crashCommand, stopCrashCommand);
+
+    crash->startCrash();
+    cout << "HERE";
+
+    //this->lapNumber = this->addRandom++;
+
 }
 
  int Lap::addRandom= 0;
@@ -46,6 +53,11 @@ Lap::Lap()
     this->nextLap = nullptr;
     this->lapNumber = this->addRandom++;
     //cout <<time <<"s"<<endl;
+    this->crash = new Crash();
+
+    this->crashComm = new CrashCommand(crash);
+    this->stopCrashComm = new StopCrashCommand(crash);
+    this->switchCont = new Switch (crashComm, stopCrashComm);
 
 }
 
@@ -66,22 +78,27 @@ Lap* Lap::getNextLap()
 
 Lap::~Lap(){}
 
-void Lap::calculateCrashPossibility() {
-    srand( (unsigned)time( NULL ) );
-    int crashPossibility = (rand() % 40) + 1;
 
+void Lap::calculateCrashPossibility() {
+    srand ( time(NULL) );
+    srand((unsigned) time(0)+this->addRandom++);
+
+    int crashPossibility = (rand() % 40) + 1;
+    //cout << endl << "NUMBER: " << crashPossibility << endl << endl;
 
     if (crashPossibility > 35) {
         //High possibility of crash, execute crash command - still chance of recovery, calculated later
-        srand( (unsigned)time( NULL ) );
+        //srand((unsigned) time(0)+this->addRandom++);
         int crashRecovery = (rand() % 40) + 1;
-        if (crashRecovery > 10) {       //Recovers from crash
-            switchCont->stopComm();
+        cout << endl << "NUMBER: " << crashRecovery << endl << endl;
+        if (crashRecovery > 5) {       //Recovers from crash
+
+           switchCont->stopComm();
 
 
         }
         else {
-            switchCont->startComm();
+            switchCont->startComm();        // Have crash
         }
     }
 }

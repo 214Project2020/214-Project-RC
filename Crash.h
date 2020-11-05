@@ -1,6 +1,5 @@
 #ifndef CRASH_H_INCLUDED
 #define CRASH_H_INCLUDED
-#include "CrashCommand.h"
 
 class Crash {
 public:
