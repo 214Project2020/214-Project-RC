@@ -2,20 +2,16 @@
 
 using namespace std;
 
-Logistics::Logistics(Track* track){
-  this->t = track;
-}
-
-Logistics::~Logistics(){
-
+Logistics::Logistics(){
+  this->tr = NULL;
 }
 
 track* Logistics::getTrack(){
 
-  return this->t;
+  return this->tr;
 }
 
 void Logistics::setTrack(Track* a){
 
-  this->t = a;
+  this->tr = a;
 }
