@@ -21,6 +21,8 @@ void Session::setPractice(int soft, int medium, int hard){
 	this->numAndType[0][0] = soft;
 	this->numAndType[0][1] = medium;
 	this->numAndType[0][2] = hard;
+	cout << "Practice set: \nSoft: " << soft << "\nMedium: " << medium << "\nHard: " << hard << endl;
+	cout << "---------------------------------------------------------------------" << endl;
 }
 
 vector<int> Session::getPractice(){
@@ -40,6 +42,8 @@ void Session::setQuali(int soft, int medium, int hard){
 	this->numAndType[1][0] = soft;
 	this->numAndType[1][1] = medium;
 	this->numAndType[1][2] = hard;
+	cout << "Qualification set: \nSoft: " <<soft << "\nMedium: " << medium << "\nHard: " << hard << endl;
+	cout << "---------------------------------------------------------------------" << endl;
 }
 
 vector<int> Session::getQuali(){
@@ -58,6 +62,8 @@ void Session::setRace(int soft, int medium, int hard){
 	this->numAndType[2][0] = soft;
 	this->numAndType[2][1] = medium;
 	this->numAndType[2][2] = hard;
+	cout << "Race set: \nSoft: " << soft << "\nMedium: " << medium << "\nHard: " << hard << endl;
+	cout << "---------------------------------------------------------------------" << endl;
 }
 
 vector<int> Session::getRace(){
