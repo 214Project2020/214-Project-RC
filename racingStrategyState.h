@@ -13,6 +13,7 @@ private:
 public:
 	racingStrategyState();
 	Session* getSession();
+	void setSession(Session*);
 	virtual void handleChange(racingStrategyContext*) = 0;
 	virtual void handleState() = 0;
 };
