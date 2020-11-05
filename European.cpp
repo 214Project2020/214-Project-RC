@@ -10,7 +10,7 @@ void European::preperation(){
 	   cout << "------------------------------------------" << endl;
     cout << "STARTING RACE IN " << this->getTrack()->getCountry() << endl;
     cout << "Category: European" << endl;
-    cout << "The car is transported by charted plane to track";
+    cout << "The car is transported by charted plane to "<< this->getTrack()->getTrackName() << endl;
     transportContainers();
     cout << "------------------------------------------" << endl;
 }
