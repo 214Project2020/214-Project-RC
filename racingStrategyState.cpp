@@ -7,3 +7,7 @@ racingStrategyState::racingStrategyState(){
 Session* racingStrategyState::getSession() {
 	return this->s;
 }
+
+void racingStrategyState::setSession(Session* s){
+	this->s = s;
+}
