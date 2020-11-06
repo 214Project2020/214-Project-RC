@@ -6,7 +6,7 @@ using namespace std;
 Track::Track(){
 	this->trackName = "";
 	this->numLaps = 0;
-	this->isEuro = false;    //this->isEuro = NULL is the same as setting it to false;
+	this->isEuro = NULL;
 	this->country = "";
 }
 
