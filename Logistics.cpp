@@ -1,4 +1,4 @@
-#include "Logistics"
+#include "Logistics.h"
 
 using namespace std;
 
@@ -6,7 +6,7 @@ Logistics::Logistics(){
   this->tr = NULL;
 }
 
-track* Logistics::getTrack(){
+Track* Logistics::getTrack(){
 
   return this->tr;
 }
