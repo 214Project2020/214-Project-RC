@@ -4,7 +4,7 @@
 
 class Command {
 public:
-    Command(){};
+    Command();  //removed the curly brackets
     virtual void execute() = 0;
 
 };

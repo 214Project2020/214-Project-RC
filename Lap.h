@@ -39,9 +39,9 @@ public:
 
     // string getTyreType();
     // void setTyreType();
-    //RaceStrategy* getRaceStrategy();
-    //void calculateCrashPossibility(string weatherCondition)
-    //virtual void executeCrash();
+    // RaceStrategy* getRaceStrategy();
+    // void calculateCrashPossibility(string weatherCondition)
+    // virtual void executeCrash();
 
 };
 
