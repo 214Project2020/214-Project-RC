@@ -12,6 +12,7 @@ class lapIterator : public Iterator
         Lap* firstLap;
         Lap* currentLap;
         float totalTime;
+        float fastestTime;
     public:
         lapIterator(Lap *l); //recieves the first lap newly created by Laps
         ~lapIterator();
@@ -22,7 +23,9 @@ class lapIterator : public Iterator
         Lap* getCurrentLap();
         void addTime();
         void displayTotalTime();
-
+        void displayFastestTime();
+        float getFastestTime();
+        float getTotalTime();
 };
 
 #endif

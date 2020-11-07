@@ -10,6 +10,7 @@ lapIterator::lapIterator(Lap* l)
     this->firstLap= l;
     this->currentLap = l;
     totalTime = 0;
+    fastestTime = 900000000000;
 }
 
 lapIterator::~lapIterator()
@@ -24,7 +25,7 @@ void lapIterator::first()
 
 void lapIterator::next()
 {
-        this->addTime();
+
 //     cout<<"next lap has time of : "<<this->currentLap->getNextLap()->getLapTime()<<"s"<<endl;
     this->currentLap= (this->currentLap->getNextLap());
 //    cout<<"current lap has time of : "<<this->currentLap->getLapTime()<<"s"<<endl;
@@ -46,8 +47,13 @@ Lap* lapIterator::getCurrentLap()
 }
 
 void lapIterator::addTime() {
-    // float timeHolder = this->getCurrentLap()->getLapTime();
-        float timeHolder = this->currentLap->getLapTime();
+    float timeHolder = this->getCurrentLap()->getLapTime();
+
+    if (timeHolder < fastestTime)
+    {
+        fastestTime = timeHolder;
+    }
+
     int secondHolder = 0;
     if ((fmod(timeHolder,1) + fmod(totalTime,1))> 0.59)
     {
@@ -72,10 +78,44 @@ void lapIterator::displayTotalTime() {
     float minuteConvert = totalTimeHolder/60;
     int secondPart = fmod(minuteConvert,1)*60;
     int minutePart = trunc(minuteConvert);
+    float hourConvert = minutePart/60;
+    int redoMinute = fmod(hourConvert,1)*60;
+    int hourPart = hourConvert;
 
     cout << endl << "----------------------------------------------------------------" << endl;
     cout << "RACE HAS ENDED" << endl;
-    //cout << "total time: " << totalTime << endl;
+    //cout << "total time: " << minutePart << endl;
     cout << "Final Time: " << minutePart << " minutes "  << secondPart << "." << milliSecondPart << " seconds" << endl;
-    cout << "----------------------------------------------------------------" << endl;
+
+}
+
+void lapIterator::displayFastestTime() {
+    int milliSecondPart = fmod(fastestTime,1)*100;
+
+    //milliSecondPart = std::ceil(milliSecondPart * 100.0) / 100.0;
+    float totalTimeHolder = fastestTime - fmod(fastestTime,1);
+    float minuteConvert = totalTimeHolder/60;
+    int secondPart = fmod(minuteConvert,1)*60;
+    int minutePart = trunc(minuteConvert);
+    float hourConvert = minutePart/60;
+    int redoMinute = fmod(hourConvert,1)*60;
+    int hourPart = hourConvert;
+
+    if (minutePart == 0){
+        cout << "Fastest Lap: " << minutePart << " minute "  << secondPart << "." << milliSecondPart << " seconds" << endl;
+        cout << "----------------------------------------------------------------" << endl;
+    }
+    else {
+        //cout << "total time: " << minutePart << endl;
+        cout << "Fastest Lap: " << minutePart << " minutes "  << secondPart << "." << milliSecondPart << " seconds" << endl;
+        cout << "----------------------------------------------------------------" << endl;
+    }
+}
+
+float lapIterator::getFastestTime() {
+    return fastestTime;
+}
+
+float lapIterator::getTotalTime() {
+    return totalTime;
 }

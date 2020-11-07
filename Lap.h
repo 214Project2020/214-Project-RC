@@ -34,14 +34,16 @@ public:
     Lap* getNextLap();
     void setNextLap(Lap * l);
     void setLapTime(float time);
-    void showLapTime();
+    void showLapTime(int num);
     void calculateCrashPossibility();
+    int getLapNumber();
+    void setLapNumber(int num);
 
     // string getTyreType();
     // void setTyreType();
-    // RaceStrategy* getRaceStrategy();
-    // void calculateCrashPossibility(string weatherCondition)
-    // virtual void executeCrash();
+    //RaceStrategy* getRaceStrategy();
+    //void calculateCrashPossibility(string weatherCondition)
+    //virtual void executeCrash();
 
 };
 

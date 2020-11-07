@@ -3,6 +3,7 @@
 #include <stdlib.h>
 #include <time.h>
 #include <ctime>
+#include <cmath>
 #include <iostream>
 #include "Crash.h"
 #include "Switch.h"
@@ -33,13 +34,9 @@ void Lap::setNextLap(Lap * l){
 this->nextLap = l;
 }
 
-void Lap::showLapTime()
+void Lap::showLapTime(int num)
 {
-        
-      int evenNumber =   (this->lapNumber)/2;
-cout<<"Lap number "<<evenNumber<<" has time of : "<<this->lapTime<<"s"<<endl;
-        //cout<<"hiii"<<endl;
-             
+        cout<<"Lap number "<< num <<" has time of : "<<this->lapTime<<"s"<<endl;
 }
 
 Lap::Lap()
@@ -51,7 +48,7 @@ Lap::Lap()
 
   randomFloat = (float)randomFloat/100;
   float time = randomInt +randomFloat;*/
-  int intPart = (rand() % (180 +60)) + 60;
+  int intPart = (rand() % 30) + 75;
   float floatPart = (rand() % 59);
   floatPart = floatPart/100;
   float time = intPart + floatPart;
@@ -93,12 +90,13 @@ void Lap::calculateCrashPossibility() {
     int crashPossibility = (rand() % 40) + 1;
     //cout << endl << "NUMBER: " << crashPossibility << endl << endl;
 
-    if (crashPossibility > 35) {
+    if (crashPossibility > 39) {
         //High possibility of crash, execute crash command - still chance of recovery, calculated later
         //srand((unsigned) time(0)+this->addRandom++);
+        srand ( time(NULL) );
         int crashRecovery = (rand() % 40) + 1;
         //cout << endl << "NUMBER: " << crashRecovery << endl << endl;
-        if (crashRecovery > 5) {       //Recovers from crash
+        if (crashRecovery > 1) {       //Recovers from crash
 
            switchCont->stopComm();
 
@@ -108,6 +106,14 @@ void Lap::calculateCrashPossibility() {
             switchCont->startComm();        // Have crash
         }
     }
+}
+
+int Lap::getLapNumber() {
+    return ceil((this->lapNumber)/2) + 1;
+}
+
+void Lap::setLapNumber(int num) {
+    lapNumber = (ceil((this->lapNumber)/2) + 1) - num;
 }
 
 // string Lap::getTyreType()
