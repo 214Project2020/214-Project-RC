@@ -80,3 +80,27 @@ void NextSeasonCar::chasImprover(){
 void NextSeasonCar::engiImprover(){
     engi->improve();
 }
+
+void NextSeasonCar::setName(string n){
+    name = n;
+}
+
+void NextSeasonCar::setEngine(string e){
+    engine = e;
+}
+
+void NextSeasonCar::setSuspension(string s){
+    suspension = s;
+}
+
+void NextSeasonCar::setBrakes(string b){
+    brakes = b;
+}
+
+void NextSeasonCar::printCarDetails(){
+    cout << "Car Details:" << endl;
+    cout << "Name: " << name << endl;
+    cout << "Engine: " << engine << endl;
+    cout << "Suspension: " << suspension << endl;
+    cout << "Brakes: " << brakes << endl;
+}

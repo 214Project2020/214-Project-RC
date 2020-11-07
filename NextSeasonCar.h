@@ -22,6 +22,10 @@ using namespace std;
 class NextSeasonCar : public F1Car
 {
 private:
+    string name;
+    string engine;
+    string suspension;
+    string brakes;
     NextSeasonDepartment *chas;
     NextSeasonDepartment *engi;
     NextSeasonDepartment *aero;
@@ -41,6 +45,13 @@ public:
     NextSeasonDepartment* getEngi();
     NextSeasonDepartment* getAero();
     NextSeasonDepartment* getElec();
+
+    void setName(string n);
+    void setEngine(string e);
+    void setSuspension(string s);
+    void setBrakes(string b);
+
+    void printCarDetails();
 
     virtual void aeroImprover();
     virtual void elecImprover();

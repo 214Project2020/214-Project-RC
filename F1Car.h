@@ -13,11 +13,6 @@
 using namespace std;
 class F1Car
 {
-private:
-    Chassis *chas;
-    Engine *engi;
-    Aerodynamics *aero;
-    Electronics *elec;
 public:
     F1Car();
     ~F1Car();

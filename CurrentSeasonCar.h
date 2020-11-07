@@ -19,6 +19,10 @@ using namespace std;
 class CurrentSeasonCar : public F1Car
 {
 private:
+    string name;
+    string engine;
+    string suspension;
+    string brakes;
     CurrentSeasonDepartment *chas;
     CurrentSeasonDepartment *engi;
     CurrentSeasonDepartment *aero;
@@ -38,10 +42,17 @@ public:
     CurrentSeasonDepartment* getAero();
     CurrentSeasonDepartment* getElec();
 
+    void setName(string n);
+    void setEngine(string e);
+    void setSuspension(string s);
+    void setBrakes(string b);
+
     virtual void aeroImprover();
     virtual void elecImprover();
     virtual void engiImprover();
     virtual void chasImprover();
+
+    void printCarDetails();
 
     //singleton implementation
     CurrentSeasonCar(const CurrentSeasonCar*){};
