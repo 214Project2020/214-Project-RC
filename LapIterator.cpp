@@ -24,7 +24,7 @@ void lapIterator::first()
 
 void lapIterator::next()
 {
-
+        this->addTime();
 //     cout<<"next lap has time of : "<<this->currentLap->getNextLap()->getLapTime()<<"s"<<endl;
     this->currentLap= (this->currentLap->getNextLap());
 //    cout<<"current lap has time of : "<<this->currentLap->getLapTime()<<"s"<<endl;
@@ -46,7 +46,8 @@ Lap* lapIterator::getCurrentLap()
 }
 
 void lapIterator::addTime() {
-    float timeHolder = this->getCurrentLap()->getLapTime();
+    // float timeHolder = this->getCurrentLap()->getLapTime();
+        float timeHolder = this->currentLap->getLapTime();
     int secondHolder = 0;
     if ((fmod(timeHolder,1) + fmod(totalTime,1))> 0.59)
     {

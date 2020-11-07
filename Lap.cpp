@@ -35,8 +35,11 @@ this->nextLap = l;
 
 void Lap::showLapTime()
 {
-
-        cout<<"Lap number "<<this->lapNumber<<" has time of : "<<this->lapTime<<"s"<<endl;
+        
+      int evenNumber =   (this->lapNumber)/2;
+cout<<"Lap number "<<evenNumber<<" has time of : "<<this->lapTime<<"s"<<endl;
+        //cout<<"hiii"<<endl;
+             
 }
 
 Lap::Lap()
