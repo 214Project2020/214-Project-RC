@@ -5,9 +5,6 @@
 #include "TestingStation.h"
 
 class TeamTestingStation : public TestingStation{
-private:
-    F1Car * carCurrentSeason;
-    F1Car * carNextSeason;
 public:
     TeamTestingStation();
     virtual ~TeamTestingStation();

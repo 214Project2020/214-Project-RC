@@ -18,9 +18,6 @@ private:
     Engine *engi;
     Aerodynamics *aero;
     Electronics *elec;
-
-
-
 public:
     F1Car();
     ~F1Car();

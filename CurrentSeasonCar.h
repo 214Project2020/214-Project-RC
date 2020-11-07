@@ -28,6 +28,8 @@ private:
     Engine * engineCreator;
     Electronics * electronicsCreator;
 
+    //singleton implementation
+    static CurrentSeasonCar *onlyInstance;
 public:
     CurrentSeasonCar();
     ~CurrentSeasonCar();
@@ -40,6 +42,11 @@ public:
     virtual void elecImprover();
     virtual void engiImprover();
     virtual void chasImprover();
+
+    //singleton implementation
+    CurrentSeasonCar(const CurrentSeasonCar*){};
+    CurrentSeasonCar& operator=(const CurrentSeasonCar*){};
+    static CurrentSeasonCar *getInstance();
     
 };
 

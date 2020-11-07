@@ -30,8 +30,12 @@ private:
     Aerodynamics * aeroCreator;
     Engine * engineCreator;
     Electronics * electronicsCreator;
+
+    //singleton implementation
+    static NextSeasonCar *onlyInstance;
 public:
     NextSeasonCar();
+    
     ~NextSeasonCar();
     NextSeasonDepartment* getChas();
     NextSeasonDepartment* getEngi();
@@ -42,6 +46,11 @@ public:
     virtual void elecImprover();
     virtual void engiImprover();
     virtual void chasImprover();
+
+    //singleton implementation
+    NextSeasonCar(const NextSeasonCar*){};
+    NextSeasonCar& operator=(const NextSeasonCar*){};
+    static NextSeasonCar *getInstance();
 };
 
 #endif

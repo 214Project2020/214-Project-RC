@@ -6,15 +6,37 @@ using namespace std;
 
 
 NextSeasonCar::NextSeasonCar(){
-    chassisCreator = new Chassis();
-    engineCreator = new Engine();
-    aeroCreator = new Aerodynamics();
-    electronicsCreator = new Electronics();
-    chas = chassisCreator->createNextSeason();
-    engi = engineCreator->createNextSeason();
-    aero = aeroCreator->createNextSeason();
-    elec = electronicsCreator->createNextSeason();
+
 }
+
+
+/**
+ * @brief Singleton
+ * 
+ * @return NextSeasonCar* 
+ */
+NextSeasonCar * NextSeasonCar::getInstance(){
+     if (onlyInstance == nullptr){
+        onlyInstance = new NextSeasonCar();    
+        onlyInstance->chassisCreator = new Chassis();
+        onlyInstance->engineCreator = new Engine();
+        onlyInstance->aeroCreator = new Aerodynamics();
+        onlyInstance->electronicsCreator = new Electronics();
+        onlyInstance->chas = onlyInstance->chassisCreator->createNextSeason();
+        onlyInstance->engi = onlyInstance->engineCreator->createNextSeason();
+        onlyInstance->aero = onlyInstance->aeroCreator->createNextSeason();
+        onlyInstance->elec = onlyInstance->electronicsCreator->createNextSeason();
+     } else {
+        return onlyInstance;
+    }
+}
+
+
+/**
+ * @brief Singleton
+ * 
+ */
+NextSeasonCar* NextSeasonCar::onlyInstance = nullptr;
 
 NextSeasonCar::~NextSeasonCar(){
     delete chassisCreator;

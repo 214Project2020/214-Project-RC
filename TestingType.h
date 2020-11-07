@@ -14,8 +14,6 @@ using namespace std;
 class TestingType{
 private:
     int numUsed; //amount of times a particular test has been used
-    F1Car * currSeason;
-    F1Car * nextSeason;
 public:
     TestingType();
     virtual ~TestingType();

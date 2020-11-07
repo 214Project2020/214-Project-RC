@@ -7,7 +7,6 @@
  */
 
 TestingStation::TestingStation(){
-
 }
 
 TestingStation::~TestingStation(){

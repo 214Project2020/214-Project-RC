@@ -6,21 +6,15 @@
  */
 
 TeamTestingStation::TeamTestingStation(){
-    carCurrentSeason = new CurrentSeasonCar();
-    carNextSeason = new NextSeasonCar();
 }
 
 TeamTestingStation::~TeamTestingStation(){
-    if (carCurrentSeason != nullptr)
-        delete carCurrentSeason;
-    if (carNextSeason != nullptr)
-        delete carNextSeason;
 }
 
 F1Car * TeamTestingStation::getCurrentCar(){
-    return carCurrentSeason;
+    return CurrentSeasonCar::getInstance();
 }
 
 F1Car * TeamTestingStation::getNextCar(){
-    return carCurrentSeason;
+    return NextSeasonCar::getInstance();
 }
