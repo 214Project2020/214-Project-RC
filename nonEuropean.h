@@ -4,10 +4,10 @@
 #include "Logistics.h"
 
 class nonEuropean : public Logistics {
-	public:
-		void transportContainers();
-		void preperation();
-		void serviceCar();
+public:
+	void transportContainers();
+	void preperation();
+	void serviceCar();
 };
 
 #endif

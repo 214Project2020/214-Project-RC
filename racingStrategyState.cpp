@@ -1,7 +1,7 @@
 #include "racingStrategyState.h"
 
 racingStrategyState::racingStrategyState(){
-	this->s = new Session();
+	this->s = NULL;
 }
 
 Session* racingStrategyState::getSession() {
