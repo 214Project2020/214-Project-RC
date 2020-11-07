@@ -4,11 +4,12 @@
 using namespace std;
 
 EngineCurrentSeason::EngineCurrentSeason(){
-    cout<<"Engine Engineering department created for current season.\n";
-    
+    cout << "Engine Engineering department created for current season." << endl;
 }
 
-void EngineCurrentSeason::EngineImprove(){
-    cout<<"Using data from testing the engine of the car of the current season has been improved.\n";
+void EngineCurrentSeason::improve(){
+    cout << "Electronics Department (Current Season): Upgraded using testing data and statistics." << endl;
+}
 
+EngineCurrentSeason::~EngineCurrentSeason(){
 }

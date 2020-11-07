@@ -15,24 +15,28 @@
 #include "EngineNextSeason.h"
 #include "ElectronicsNextSeason.h"
 #include "ChassisNextSeason.h"
+#include "EngineeringDepartment.h"
 
 using namespace std;
+
 class NextSeasonCar : public F1Car
 {
 private:
-    Chassis *chas;
-    Engine *engi;
-    Aerodynamics *aero;
-    Electronics *elec;
-    
-
+    NextSeasonDepartment *chas;
+    NextSeasonDepartment *engi;
+    NextSeasonDepartment *aero;
+    NextSeasonDepartment *elec;
+    Chassis * chassisCreator;
+    Aerodynamics * aeroCreator;
+    Engine * engineCreator;
+    Electronics * electronicsCreator;
 public:
     NextSeasonCar();
     ~NextSeasonCar();
-    Chassis* getChas();
-    Engine* getEngi();
-    Aerodynamics* getAero();
-    Electronics* getElec();
+    NextSeasonDepartment* getChas();
+    NextSeasonDepartment* getEngi();
+    NextSeasonDepartment* getAero();
+    NextSeasonDepartment* getElec();
 
     virtual void aeroImprover();
     virtual void elecImprover();

@@ -11,10 +11,6 @@ TestingStation::TestingStation(){
 }
 
 TestingStation::~TestingStation(){
-    for(int i=0; i < typeList.size() && typeList[i] != nullptr; i++){
-        delete typeList[i];
-        typeList[i] = nullptr;
-    }
 }
 
 void TestingStation::addType(TestingType * type){

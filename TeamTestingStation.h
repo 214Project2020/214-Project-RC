@@ -6,12 +6,13 @@
 
 class TeamTestingStation : public TestingStation{
 private:
-    F1Car * car;
+    F1Car * carCurrentSeason;
+    F1Car * carNextSeason;
 public:
-    TeamTestingStation(F1Car * newCar);
+    TeamTestingStation();
     virtual ~TeamTestingStation();
-    F1Car * getCar();
-    void setCar(F1Car * c);
+    F1Car * getCurrentCar();
+    F1Car * getNextCar();
 };
 
 #endif

@@ -1,20 +1,20 @@
 #ifndef AERODYNAMICS_H
 #define AERODYNAMICS_H
 
+#include "EngineeringDepartment.h"
 #include <string>
 #include <stdlib.h>
 #include <time.h>
 #include <iostream>
 
 using namespace std;
-class Aerodynamics
+class Aerodynamics : public EngineeringDepartment
 {
-private:
-
 public:
     Aerodynamics();
     ~Aerodynamics();
-    virtual void AeroImprove()=0;
+    virtual CurrentSeasonDepartment * createCurrentSeason();
+    virtual NextSeasonDepartment * createNextSeason();
 };
 
 #endif

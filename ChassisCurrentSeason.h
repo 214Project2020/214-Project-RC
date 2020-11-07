@@ -5,17 +5,15 @@
 #include <stdlib.h>
 #include <time.h>
 #include <iostream>
-#include "Chassis.h"
+#include "CurrentSeasonDepartment.h"
 
 using namespace std;
-class ChassisCurrentSeason : public Chassis
+class ChassisCurrentSeason : public CurrentSeasonDepartment
 {
-private:
-
 public:
     ChassisCurrentSeason();
     ~ChassisCurrentSeason();
-    virtual void ChassisImprove();
+    virtual void improve();
 };
 
 #endif

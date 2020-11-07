@@ -19,19 +19,22 @@ using namespace std;
 class CurrentSeasonCar : public F1Car
 {
 private:
-    Chassis *chas;
-    Engine *engi;
-    Aerodynamics *aero;
-    Electronics *elec;
-    
+    CurrentSeasonDepartment *chas;
+    CurrentSeasonDepartment *engi;
+    CurrentSeasonDepartment *aero;
+    CurrentSeasonDepartment *elec;
+    Chassis * chassisCreator;
+    Aerodynamics * aeroCreator;
+    Engine * engineCreator;
+    Electronics * electronicsCreator;
 
 public:
     CurrentSeasonCar();
     ~CurrentSeasonCar();
-    Chassis* getChas();
-    Engine* getEngi();
-    Aerodynamics* getAero();
-    Electronics* getElec();
+    CurrentSeasonDepartment* getChas();
+    CurrentSeasonDepartment* getEngi();
+    CurrentSeasonDepartment* getAero();
+    CurrentSeasonDepartment* getElec();
 
     virtual void aeroImprover();
     virtual void elecImprover();

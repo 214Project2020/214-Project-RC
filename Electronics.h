@@ -1,20 +1,16 @@
-#ifndef ELECTONICS_H
-#define ELECTONICS_H
+#ifndef ELECTRONICS_H
+#define ELECTRONICS_H
 
-#include <string>
-#include <stdlib.h>
-#include <time.h>
+#include "EngineeringDepartment.h"
+
 #include <iostream>
 
-using namespace std;
-class Electronics
-{
-private:
-
+class Electronics : public EngineeringDepartment{
 public:
     Electronics();
     ~Electronics();
-    virtual void ElecImprove()=0;
+    virtual CurrentSeasonDepartment * createCurrentSeason();
+    virtual NextSeasonDepartment * createNextSeason();
 };
 
 #endif

@@ -5,17 +5,17 @@
 #include <stdlib.h>
 #include <time.h>
 #include <iostream>
-#include "Engine.h"
+#include "NextSeasonDepartment.h"
 
 using namespace std;
-class EngineNextSeason : public Engine
+class EngineNextSeason : public NextSeasonDepartment
 {
 private:
 
 public:
     EngineNextSeason();
     ~EngineNextSeason();
-    virtual void EngineImprove();
+    virtual void improve();
 };
 
 #endif

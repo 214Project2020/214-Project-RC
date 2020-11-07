@@ -4,11 +4,12 @@
 using namespace std;
 
 ElectronicsNextSeason::ElectronicsNextSeason(){
-    cout<<"Electronics Engineering department created for next season.\n";
-    
+    cout << "Electronics Engineering department created for next season." << endl;
 }
 
-void ElectronicsNextSeason::ElecImprove(){
-    cout<<"Using data from testing the Electronics of the car of the next season has been improved.\n";
+void ElectronicsNextSeason::improve(){
+    cout << "Electronics Department (Next Season): Upgraded using testing data and statistics." << endl;
+}
 
+ElectronicsNextSeason::~ElectronicsNextSeason(){
 }

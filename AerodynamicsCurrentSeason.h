@@ -5,17 +5,17 @@
 #include <stdlib.h>
 #include <time.h>
 #include <iostream>
-#include "Aerodynamics.h"
+#include "CurrentSeasonDepartment.h"
 
 using namespace std;
-class AerodynamicsCurrentSeason : public Aerodynamics
+class AerodynamicsCurrentSeason : public CurrentSeasonDepartment
 {
 private:
 
 public:
     AerodynamicsCurrentSeason();
     ~AerodynamicsCurrentSeason();
-    virtual void AeroImprove();
+    virtual void improve();
 };
 
 #endif

@@ -3,25 +3,24 @@
  * @brief Construct a new Team Testing Station:: Team Testing Station object
  * @brief Concrete Subject
  * 
- * @param newCar 
  */
 
-TeamTestingStation::TeamTestingStation(F1Car * newCar){
-    car = newCar;
+TeamTestingStation::TeamTestingStation(){
+    carCurrentSeason = new CurrentSeasonCar();
+    carNextSeason = new NextSeasonCar();
 }
 
 TeamTestingStation::~TeamTestingStation(){
-    if (car != nullptr)
-        delete car;
+    if (carCurrentSeason != nullptr)
+        delete carCurrentSeason;
+    if (carNextSeason != nullptr)
+        delete carNextSeason;
 }
 
-F1Car * TeamTestingStation::getCar(){
-    return car;
+F1Car * TeamTestingStation::getCurrentCar(){
+    return carCurrentSeason;
 }
 
-void TeamTestingStation::setCar(F1Car * c){
-    if (car != nullptr)
-        delete car;
-
-    car = c;
+F1Car * TeamTestingStation::getNextCar(){
+    return carCurrentSeason;
 }

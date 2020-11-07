@@ -1,20 +1,21 @@
 #ifndef CHASSIS_H
 #define CHASSIS_H
 
+#include "EngineeringDepartment.h"
+
 #include <string>
 #include <stdlib.h>
 #include <time.h>
 #include <iostream>
 
 using namespace std;
-class Chassis
+class Chassis : public EngineeringDepartment
 {
-private:
-
 public:
     Chassis();
     ~Chassis();
-    virtual void ChassisImprove()=0;
+    virtual CurrentSeasonDepartment * createCurrentSeason();
+    virtual NextSeasonDepartment * createNextSeason();
 };
 
 #endif

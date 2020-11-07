@@ -6,42 +6,55 @@ using namespace std;
 
 
 CurrentSeasonCar::CurrentSeasonCar(){
-    chas = new ChassisCurrentSeason();
-    engi = new EngineCurrentSeason();
-    aero = new AerodynamicsCurrentSeason();
-    elec = new ElectronicsCurrentSeason();
-    
+    chassisCreator = new Chassis();
+    engineCreator = new Engine();
+    aeroCreator = new Aerodynamics();
+    electronicsCreator = new Electronics();
+    chas = chassisCreator->createCurrentSeason();
+    engi = engineCreator->createCurrentSeason();
+    aero = aeroCreator->createCurrentSeason();
+    elec = electronicsCreator->createCurrentSeason();
 }
 
+CurrentSeasonCar::~CurrentSeasonCar(){
+    delete chassisCreator;
+    delete engineCreator;
+    delete aeroCreator;
+    delete electronicsCreator;
+    delete chas;
+    delete engi;
+    delete aero;
+    delete elec;
+}
 
-Chassis* CurrentSeasonCar::getChas(){
+CurrentSeasonDepartment* CurrentSeasonCar::getChas(){
     return chas;
 }
 
-Electronics* CurrentSeasonCar::getElec(){
+CurrentSeasonDepartment* CurrentSeasonCar::getElec(){
     return elec;
 }
 
-Engine* CurrentSeasonCar::getEngi(){
+CurrentSeasonDepartment* CurrentSeasonCar::getEngi(){
     return engi;
 }
 
-Aerodynamics* CurrentSeasonCar::getAero(){
+CurrentSeasonDepartment* CurrentSeasonCar::getAero(){
     return aero;
 }
 
 void CurrentSeasonCar::aeroImprover(){
-    aero->AeroImprove();
+    aero->improve();
 }
 
 void CurrentSeasonCar::elecImprover(){
-    elec->ElecImprove();
+    elec->improve();
 }
 
 void CurrentSeasonCar::chasImprover(){
-    chas->ChassisImprove();
+    chas->improve();
 }
 
 void CurrentSeasonCar::engiImprover(){
-    engi->EngineImprove();
+    engi->improve();
 }

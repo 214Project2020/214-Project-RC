@@ -5,17 +5,15 @@
 #include <stdlib.h>
 #include <time.h>
 #include <iostream>
-#include "Electronics.h"
+#include "NextSeasonDepartment.h"
 
 using namespace std;
-class ElectronicsNextSeason : public Electronics
+class ElectronicsNextSeason : public NextSeasonDepartment
 {
-private:
-
 public:
     ElectronicsNextSeason();
     ~ElectronicsNextSeason();
-    virtual void ElecImprove();
+    virtual void improve();
 };
 
 #endif

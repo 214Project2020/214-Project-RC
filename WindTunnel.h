@@ -9,7 +9,7 @@ private:
     TeamTestingStation * station; //relevant TeamTestingStation for the test which will call notify function
     int limit; //number of attemps allowed for particular test
 public:
-    WindTunnel(TeamTestingStation * TTS, int accuracy, int limit, CurrentSeasonCar * curr, NextSeasonCar * next);
+    WindTunnel(TeamTestingStation *);
     virtual ~WindTunnel();
     virtual void runCurrentSeasonTest();
     virtual void runNextSeasonTest();

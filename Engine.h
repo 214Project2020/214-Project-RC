@@ -1,20 +1,23 @@
 #ifndef ENGINE_H
 #define ENGINE_H
 
+#include "EngineeringDepartment.h"
+#include "CurrentSeasonDepartment.h"
+#include "NextSeasonDepartment.h"
+
 #include <string>
 #include <stdlib.h>
 #include <time.h>
 #include <iostream>
 
 using namespace std;
-class Engine
+class Engine : public EngineeringDepartment
 {
-private:
-
 public:
     Engine();
     ~Engine();
-    virtual void EngineImprove()=0;
+    virtual CurrentSeasonDepartment * createCurrentSeason();
+    virtual NextSeasonDepartment * createNextSeason();
 };
 
 #endif

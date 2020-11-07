@@ -4,11 +4,9 @@
 using namespace std;
 
 AerodynamicsNextSeason::AerodynamicsNextSeason(){
-    cout<<"Aerodynamics Engineering department created for next season.\n";
-    
+    //cout << "Aerodynamics Engineering department created for next season." << endl;
 }
 
-void AerodynamicsNextSeason::AeroImprove(){
-    cout<<"Using data from testing the aerodynamics of the car of the next season has been improved.\n";
-
+void AerodynamicsNextSeason::improve(){
+    cout << "Aerodynamics Department (Next Season): Upgraded using testing data and statistics." << endl;
 }
