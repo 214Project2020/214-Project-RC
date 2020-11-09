@@ -6,6 +6,8 @@
  */
 
 TeamTestingStation::TeamTestingStation(){
+    CurrentSeasonCar::getInstance();
+    NextSeasonCar::getInstance();
 }
 
 TeamTestingStation::~TeamTestingStation(){

@@ -1,0 +1,178 @@
+# depslib dependency file v1.0
+1604512939 source:d:\2020\cos 214\project\tester2\tester2\iterator.cpp
+	"Iterator.h"
+
+1604512939 d:\2020\cos 214\project\tester2\tester2\iterator.h
+	"Lap.h"
+
+1604688336 d:\2020\cos 214\project\tester2\tester2\lap.h
+	"Crash.h"
+	"Switch.h"
+	"CrashCommand.h"
+	"StopCrashCommand.h"
+	"Command.h"
+
+1604512939 source:d:\2020\cos 214\project\tester2\tester2\laps.cpp
+	"Laps.h"
+	"lapIterator.h"
+	"Lap.h"
+
+1604512939 d:\2020\cos 214\project\tester2\tester2\laps.h
+	"Iterator.h"
+	"Lap.h"
+	"Race.h"
+	"lapIterator.h"
+
+1604512939 d:\2020\cos 214\project\tester2\tester2\race.h
+	"Iterator.h"
+	"Lap.h"
+
+1604684270 d:\2020\cos 214\project\tester2\tester2\lapiterator.h
+	"Iterator.h"
+	"Lap.h"
+
+1604689762 source:d:\2020\cos 214\project\tester2\tester2\main.cpp
+	"Iterator.h"
+	"lapIterator.h"
+	"Lap.h"
+	"Laps.h"
+	"Race.h"
+	"European.h"
+	"nonEuropean.h"
+	"racingStrategyContext.h"
+	"Tyres.h"
+	<iostream>
+	<cstdlib>
+	<ctime>
+	<cmath>
+	<string>
+
+1604512939 source:d:\2020\cos 214\project\tester2\tester2\race.cpp
+	"Race.h"
+
+1604684326 source:d:\2020\cos 214\project\tester2\tester2\lapiterator.cpp
+	"Lap.h"
+	"lapIterator.h"
+	<iostream>
+	<cmath>
+
+1604688922 source:d:\2020\cos 214\project\tester2\tester2\crash.cpp
+	"CrashCommand.h"
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+	<iostream>
+	"Crash.h"
+
+1604577853 d:\2020\cos 214\project\tester2\tester2\crashcommand.h
+	"Command.h"
+	"Crash.h"
+
+1604570695 d:\2020\cos 214\project\tester2\tester2\crash.h
+
+1604578128 source:d:\2020\cos 214\project\tester2\tester2\crashcommand.cpp
+	"CrashCommand.h"
+	"Command.h"
+	"Crash.h"
+	<iostream>
+	<stdlib.h>
+
+1604579327 source:d:\2020\cos 214\project\tester2\tester2\command.cpp
+
+1604579340 d:\2020\cos 214\project\tester2\tester2\command.h
+
+1604569032 source:d:\2020\cos 214\project\tester2\tester2\switch.cpp
+	"Switch.h"
+
+1604512939 d:\2020\cos 214\project\tester2\tester2\switch.h
+	"Command.h"
+
+1604571192 source:d:\2020\cos 214\project\tester2\tester2\stopcrashcommand.cpp
+	"StopCrashCommand.h"
+	<iostream>
+	<stdlib.h>
+
+1604578067 d:\2020\cos 214\project\tester2\tester2\stopcrashcommand.h
+	"Crash.h"
+	"Command.h"
+
+1604688308 source:d:\2020\cos 214\project\tester2\tester2\lap.cpp
+	"Lap.h"
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+	<ctime>
+	<cmath>
+	<iostream>
+	"Crash.h"
+	"Switch.h"
+	"CrashCommand.h"
+	"StopCrashCommand.h"
+	"Command.h"
+
+1604588794 source:d:\2020\cos 214\project\tester2\tester2\european.cpp
+	"European.h"
+	<iostream>
+
+1604588716 d:\2020\cos 214\project\tester2\tester2\european.h
+	"Logistics.h"
+
+1604588159 d:\2020\cos 214\project\tester2\tester2\logistics.h
+	"Track.h"
+
+1604587502 d:\2020\cos 214\project\tester2\tester2\track.h
+	<string>
+
+1604588170 source:d:\2020\cos 214\project\tester2\tester2\logistics.cpp
+	"Logistics.h"
+
+1604592070 source:d:\2020\cos 214\project\tester2\tester2\noneuropean.cpp
+	"nonEuropean.h"
+	<iostream>
+
+1604588721 d:\2020\cos 214\project\tester2\tester2\noneuropean.h
+	"Logistics.h"
+
+1604592471 source:d:\2020\cos 214\project\tester2\tester2\onepitstopstrat.cpp
+	"racingStrategyState.h"
+
+1604590501 d:\2020\cos 214\project\tester2\tester2\racingstrategystate.h
+	"Session.h"
+	"racingStrategyContext.h"
+	<iostream>
+
+1604590487 d:\2020\cos 214\project\tester2\tester2\session.h
+	<string>
+	<vector>
+	<iostream>
+
+1604587745 d:\2020\cos 214\project\tester2\tester2\racingstrategycontext.h
+	"Track.h"
+	"racingStrategyState.h"
+	"Session.h"
+
+1604590826 source:d:\2020\cos 214\project\tester2\tester2\racingstrategycontext.cpp
+	"racingStrategyContext.h"
+
+1604589694 source:d:\2020\cos 214\project\tester2\tester2\racingstrategystate.cpp
+	"racingStrategyState.h"
+
+1604590941 source:d:\2020\cos 214\project\tester2\tester2\session.cpp
+	"Session.h"
+
+1604587525 source:d:\2020\cos 214\project\tester2\tester2\track.cpp
+	"Track.h"
+	<string>
+
+1604590847 source:d:\2020\cos 214\project\tester2\tester2\twopitstopstrat.cpp
+	"racingStrategyState.h"
+
+1604679923 source:d:\2020\cos 214\project\tester2\tester2\tyres.cpp
+	"racingStrategyState.h"
+	<iostream>
+	"Tyres.h"
+
+1604668880 d:\2020\cos 214\project\tester2\tester2\tyres.h
+	"racingStrategyState.h"
+	<iostream>
+

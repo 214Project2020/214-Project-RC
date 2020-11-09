@@ -8,6 +8,7 @@
 #include "MyTeam.h"
 
 using namespace std;
+class TechTeam;
 
 class AnalysisTeam : public MyTeam                 //subject
 {	

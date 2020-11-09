@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="Tester2" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug">
+				<Option output="bin/Debug/Tester2" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Debug/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-g" />
+				</Compiler>
+			</Target>
+			<Target title="Release">
+				<Option output="bin/Release/Tester2" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-O2" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+			<Add option="-fexceptions" />
+		</Compiler>
+		<Unit filename="Command.cpp" />
+		<Unit filename="Command.h" />
+		<Unit filename="Crash.cpp" />
+		<Unit filename="Crash.h" />
+		<Unit filename="CrashCommand.cpp" />
+		<Unit filename="CrashCommand.h" />
+		<Unit filename="European.cpp" />
+		<Unit filename="European.h" />
+		<Unit filename="Iterator.cpp" />
+		<Unit filename="Iterator.h" />
+		<Unit filename="Lap.cpp" />
+		<Unit filename="Lap.h" />
+		<Unit filename="LapIterator.cpp" />
+		<Unit filename="LapIterator.h" />
+		<Unit filename="Laps.cpp" />
+		<Unit filename="Laps.h" />
+		<Unit filename="Logistics.cpp" />
+		<Unit filename="Logistics.h" />
+		<Unit filename="Race.cpp" />
+		<Unit filename="Race.h" />
+		<Unit filename="Session.cpp" />
+		<Unit filename="Session.h" />
+		<Unit filename="StopCrashCommand.cpp" />
+		<Unit filename="StopCrashCommand.h" />
+		<Unit filename="Switch.cpp" />
+		<Unit filename="Switch.h" />
+		<Unit filename="Tester2.cbp" />
+		<Unit filename="Tester2.depend" />
+		<Unit filename="Tester2.layout" />
+		<Unit filename="Track.cpp" />
+		<Unit filename="Track.h" />
+		<Unit filename="Tyres.cpp" />
+		<Unit filename="Tyres.h" />
+		<Unit filename="main.cpp" />
+		<Unit filename="makefile" />
+		<Unit filename="nonEuropean.cpp" />
+		<Unit filename="nonEuropean.h" />
+		<Unit filename="onePitStopStrat.cpp" />
+		<Unit filename="racingStrategyContext.cpp" />
+		<Unit filename="racingStrategyContext.h" />
+		<Unit filename="racingStrategyState.cpp" />
+		<Unit filename="racingStrategyState.h" />
+		<Unit filename="twoPitStopStrat.cpp" />
+		<Extensions>
+			<code_completion />
+			<envvars />
+			<debugger />
+			<lib_finder disable_auto="1" />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>

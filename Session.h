@@ -9,7 +9,7 @@ using namespace std;
 
 class Session {
 private:
-	vector<vector<int>> numAndType;
+	vector<vector<int> > numAndType;
 public:
 	Session();
 	~Session();

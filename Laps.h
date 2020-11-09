@@ -4,7 +4,7 @@
 #include "Iterator.h"
 #include "Lap.h"
 #include "Race.h"
-#include "lapIterator.h"
+#include "LapIterator.h"
 
 using namespace std;
 

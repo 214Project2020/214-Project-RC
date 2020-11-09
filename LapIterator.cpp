@@ -1,5 +1,5 @@
 #include "Lap.h"
-#include "lapIterator.h"
+#include "LapIterator.h"
 #include <iostream>
 #include <cmath>
 

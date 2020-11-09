@@ -1,26 +1,18 @@
-ofiles= Main.o European.o Logistics.o Track.o nonEuropean.o
-gpp_o= g++ -c -std=c++11 -static
+CC := g++
+CFLAGS := -ggdb -w -c
+LFLAGS := -ggdb -w
+MAINFILE_NAME := Main
 
-Main: $(ofiles)
-	g++ -std=c++11 -static $(ofiles) -o Main
+make: compileAll *.o
+	$(CC) $(LFLAGS) *.o -o $(MAINFILE_NAME)
 
-Main.o: Main.cpp European.h Logistics.h Track.h nonEuropean.h
-	$(gpp_o) Main.cpp
+compileAll: *.cpp *.h
+	$(CC) $(CFLAGS) *.cpp
 
-European: European.cpp European.h
-	$(gpp_o) European.cpp
-
-Logistics: Logistics.cpp Logistics.h
-	$(gpp_o) Logistics.cpp
-
-Track: Track.cpp Track.h
-	$(gpp_o) Track.cpp
-
-nonEuropean: nonEuropean.cpp nonEuropean.h
-	$(gpp_o) nonEuropean.cpp
-
-run: Main
-	./Main
+run: $(MAINFILE_NAME)
+	./$(MAINFILE_NAME)
 
 clean:
-	rm *.o Main
+	rm *.o
+	rm $(MAINFILE_NAME)
+	

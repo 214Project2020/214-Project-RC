@@ -1,5 +1,5 @@
 #include "Laps.h"
-#include "lapIterator.h"
+#include "LapIterator.h"
 #include "Lap.h"
 
 using namespace std;
